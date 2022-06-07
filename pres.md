@@ -226,3 +226,14 @@ fn greet(name: String) {
 * Clone [Play](https://play.rust-lang.org/?version=stable&mode=debug&edition=2021&gist=9c066c8f27eaf558d0eb4afd394324c7)
 * Reference [Play](https://play.rust-lang.org/?version=stable&mode=debug&edition=2021&gist=a13f5450049771869be55e2a9155af93)
 * Return [Play](https://play.rust-lang.org/?version=stable&mode=debug&edition=2021&gist=4572a6f307d504c6d151306567868673)
+
+# Deep Dive
+
+## Duik in een voorbeeld
+
+* Commandline Tool: [Blek](https://github.com/berkes/blek)
+* Webservice: [Spicy Scarlet Slug](https://github.com/berkes/spicy-scarlet-slug)
+* Bot: [Hunter2](https://github.com/Flockingbird/hunter2)
+* WASM: [WASM-Game-of-life](https://github.com/berkes/wasm-game-of-life)
+* Game Dev: ?
+* GUI Dev: ?
