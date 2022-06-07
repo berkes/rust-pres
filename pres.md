@@ -30,7 +30,7 @@ lang: nl
 
 ## Doel
 
-* Jullie schrijven een volgend project(je) in Rust.
+* Je volgend project(je) in Rust?
 * Hoe begin ik met Rust? 
 * Wanneer er interesse en tijd is, zullen we dieper in een voorbeeld duiken.
 
@@ -104,7 +104,7 @@ Foundation aangekondigd door de vijf founding bedrijven:
 
 --- 
 
-[Memory Safety](https://hacks.mozilla.org/2019/01/fearless-security-memory-safety/)
+Op te lossen probleem: [Memory Safety](https://hacks.mozilla.org/2019/01/fearless-security-memory-safety/)
 
 ::: notes
 
@@ -118,8 +118,8 @@ Foundation aangekondigd door de vijf founding bedrijven:
 ## Iedereen: Garbage Collector
 
 * Laat de Runtime het oplossen:
-* `let foo = "bar"`
-* Heap? Stack? Vrijgeven?
+* `String greeting = "Hello";`
+* Heap? Stack? Gebruikt? Vrijgeven?
 * Traag! [Instagram: 10% performancewinst door uitzetten van de GC](https://instagram-engineering.com/dismissing-python-garbage-collection-at-instagram-4dca40b29172)
 * Locking - Threads
 
