@@ -59,7 +59,7 @@ Python, Firefox, Linux, OSX (darwin), Windows.
 ::: notes
 
 C en C++ bevatten enkele, achteraf, kritische ontwerpfouten
-Memory unsafety. Null-pointer, Stack Overflow, Data Races, etc.
+Memory unsafety. Null-pointer, Stack Overflow, Data Races, SegFaults etc.
 
 :::
 
@@ -100,4 +100,64 @@ Foundation aangekondigd door de vijf founding bedrijven:
 - Microsoft
 - Mozilla.
 
+:::
+
+--- 
+
+[Memory Safety](https://hacks.mozilla.org/2019/01/fearless-security-memory-safety/)
+
+::: notes
+
+* Performance en Security
+* Pointers, addresses etc.
+* Lijst met 11 mensen -> Geef aan Peter om te sorteren en aan Oscar om "niet betaald" eruit te halen.
+* Wat als Oscar er twee uithaalt. En Peter ze nog aan het sorteren is?
+
+:::
+
+## Iedereen: Garbage Collector
+
+* Laat de Runtime het oplossen:
+* `let foo = "bar"`
+* Heap? Stack? Vrijgeven?
+* Traag! [Instagram: 10% performancewinst door uitzetten van de GC](https://instagram-engineering.com/dismissing-python-garbage-collection-at-instagram-4dca40b29172)
+* Locking - Threads
+
+::: notes
+* Stop! Alles.
+* Wat kunnen we opschonen? 
+* Verwijder dit.
+* Geef geheugen vrij.
+:::
+
+## C en C++: DIY
+
+> Rust Is the Industry’s ‘Best Chance’ at Safe Systems Programming
+> -- [Microsoft](https://thenewstack.io/microsoft-rust-is-the-industrys-best-chance-at-safe-systems-programming/)
+
+## Rust: Borrow checker (ownership)
+
+> Ownership is Rust’s most unique feature, and it enables Rust to make memory
+> safety guarantees without needing a garbage collector.
+> -- [The Rust Handbook](https://doc.rust-lang.org/book/ch04-00-understanding-ownership.html)
+
+::: notes
+
+* Performance en Security
+* Pointers, addresses etc.
+* Lijst met 11 mensen -> Geef aan Oscar om te filteren en **daarna door** aan Peter om te sorteren.
+* Wat als Oscar nummer 6 verwijdert? En Peter daarna bij 6 aanbeland tijdens het sorteren?
+
+:::
+
+## Threading
+
+[Fearless Concurrency](https://doc.rust-lang.org/book/ch16-00-concurrency.html)
+
+> By leveraging ownership and type checking, many concurrency errors are compile-time errors in Rust rather than runtime errors.
+> -- [The Rust Programming Lanuage Handbook](https://doc.rust-lang.org/book/ch16-00-concurrency.html)
+
+::: notes
+* Lijst met 11 mensen -> Geef aan Oscar om we filteren en **tegelijk** aan Peter om te sorteren.
+* Borrow-checker kan dit ook oplossen!
 :::
