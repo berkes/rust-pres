@@ -161,3 +161,68 @@ Op te lossen probleem: [Memory Safety](https://hacks.mozilla.org/2019/01/fearles
 * Lijst met 11 mensen -> Geef aan Oscar om we filteren en **tegelijk** aan Peter om te sorteren.
 * Borrow-checker kan dit ook oplossen!
 :::
+
+# Hello World
+
+## Hello World
+
+```rust
+fn main() {
+    println!("Hello World!");
+}
+```
+[Play](https://play.rust-lang.org/?version=stable&mode=debug&edition=2021&gist=1ec91939ba95a128f295bfa0fba22fde)
+
+## Hello Functions
+
+```rust
+fn main() {
+    println!("Hello {}!", "Moon");
+    greet("Mars");
+}
+
+fn greet(name: &str) {
+    println!("Hello {}!", name);
+}
+
+```
+[Play](https://play.rust-lang.org/?version=stable&mode=debug&edition=2021&gist=aee43ac97b5165cee53a72d8559c409e)
+
+## Hello Types
+```rust
+fn main() {
+    let name = format!("{} {}", "Bèr", "Kessels");
+    greet(name);
+    greet(42);
+}
+
+fn greet(name: String) {
+    println!("Hello {}!", name);
+}
+```
+* Wat gaat hier fout?
+
+[Play](https://play.rust-lang.org/?version=stable&mode=debug&edition=2021&gist=960875932d9d4c2179f65c8b065dcdd9)
+
+## Hello Borrow Checker
+
+```rust
+fn main() {
+    let name = format!("{} {}", "Bèr", "Kessels");
+    greet(name);
+    println!("Goodbye, {}", name);
+}
+
+fn greet(name: String) {
+    println!("Hello {}!", name);
+}
+```
+
+* Wat gaat hier fout?
+
+[Play](https://play.rust-lang.org/?version=stable&mode=debug&edition=2021&gist=719a66d4d0dabcaaecea6484bf89b223)
+
+---
+* Clone [Play](https://play.rust-lang.org/?version=stable&mode=debug&edition=2021&gist=9c066c8f27eaf558d0eb4afd394324c7)
+* Reference [Play](https://play.rust-lang.org/?version=stable&mode=debug&edition=2021&gist=a13f5450049771869be55e2a9155af93)
+* Return [Play](https://play.rust-lang.org/?version=stable&mode=debug&edition=2021&gist=4572a6f307d504c6d151306567868673)
