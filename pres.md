@@ -217,6 +217,9 @@ fn main() {
     println!("Hello World!");
 }
 ```
+
+`rustc hello.rs`
+
 [Play](https://play.rust-lang.org/?version=stable&mode=debug&edition=2021&gist=1ec91939ba95a128f295bfa0fba22fde)
 
 ## Hello Functions
