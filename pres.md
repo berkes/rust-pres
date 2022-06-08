@@ -167,6 +167,14 @@ Op te lossen probleem: [Memory Safety](https://hacks.mozilla.org/2019/01/fearles
 * Borrow-checker kan dit ook oplossen!
 :::
 
+## Who?
+
+Android, Amazon, Cloudflare, Discord, Dropbox, ...
+
+Microsoft, Google, IBM, Facebook, Huawei, Mozilla, Samsung, Kraken.
+
+Signal, System76, Npm, Nextcloud, Fly.io.
+
 # Hello World { background-image=hello.gif }
 
 ## Hello World
