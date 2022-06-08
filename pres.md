@@ -240,6 +240,27 @@ fn greet(name: String) {
 * Reference [Play](https://play.rust-lang.org/?version=stable&mode=debug&edition=2021&gist=a13f5450049771869be55e2a9155af93)
 * Return [Play](https://play.rust-lang.org/?version=stable&mode=debug&edition=2021&gist=4572a6f307d504c6d151306567868673)
 
+# Getting Started { background-image=noob.gif }
+
+## Tools
+
+* rustup (of `apt-get install rustc rust-all`)
+* rustc 
+* cargo (of `apt-get install cargo`)
+* clippy, fmt, wasm, test, clean, publish, watch, run
+
+## Resources
+
+* [Rust Getting Started](https://www.rust-lang.org/learn/) - Book, Rustlings Course, Rust-by-example
+* [Playground](https://play.rust-lang.org/)
+* [The Cargo Book](https://doc.rust-lang.org/cargo/)
+* [Commandline-, Webassembly-, Embedded book](https://www.rust-lang.org/learn/)
+* [Awesome Rust](https://github.com/rust-unofficial/awesome-rust#resources)
+* [Rust Learning](https://github.com/ctjhoa/rust-learning)
+* [Take Your First Steps With Rust](https://docs.microsoft.com/en-us/learn/paths/rust-first-steps/)
+
+* Udemy, Coursera, Freecodecamp
+
 # Deep Dive { background-image=dive.gif }
 
 ## Duik in een voorbeeld
