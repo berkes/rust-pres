@@ -8,10 +8,14 @@ keywords:
   - rust
   - programming
   - introductie
+background-image: back.svg
+title-slide-attributes:
+    data-background-image: animated-ferris.gif
+    data-background-size: contain
 lang: nl
 ---
 
-# Rust
+# Rust {background-image="./animated-ferris.gif"}
 
 ## Over deze presentatie
 
@@ -20,7 +24,7 @@ lang: nl
 * Enige kennis van automatisering of programmeren is mooi
 * Is in het Nederlands
 
-## Over mij
+## Over mij {background-image="./ber.jpg"}
 
 * Bèr `berkes` Kessels
 * @berkes
@@ -40,7 +44,7 @@ lang: nl
 
 > Software is eating the world
 >
-> - Marc Andreessen
+> -- Marc Andreessen
 
 De wereld, anno 2022, draait op C.
 
@@ -54,7 +58,8 @@ Python, Firefox, Linux, OSX (darwin), Windows.
 ## De grote ontwerpfout
 
 > I call it my billion-dollar mistake…
-> - Tony Hoare, inventor of ALGOL W.
+>
+> -- Tony Hoare, inventor of ALGOL W.
 
 ::: notes
 
@@ -162,7 +167,7 @@ Op te lossen probleem: [Memory Safety](https://hacks.mozilla.org/2019/01/fearles
 * Borrow-checker kan dit ook oplossen!
 :::
 
-# Hello World
+# Hello World { background-image=hello.gif }
 
 ## Hello World
 
@@ -227,7 +232,7 @@ fn greet(name: String) {
 * Reference [Play](https://play.rust-lang.org/?version=stable&mode=debug&edition=2021&gist=a13f5450049771869be55e2a9155af93)
 * Return [Play](https://play.rust-lang.org/?version=stable&mode=debug&edition=2021&gist=4572a6f307d504c6d151306567868673)
 
-# Deep Dive
+# Deep Dive { background-image=dive.gif }
 
 ## Duik in een voorbeeld
 
