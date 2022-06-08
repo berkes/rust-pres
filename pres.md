@@ -240,7 +240,7 @@ fn greet(name: String) {
 * Reference [Play](https://play.rust-lang.org/?version=stable&mode=debug&edition=2021&gist=a13f5450049771869be55e2a9155af93)
 * Return [Play](https://play.rust-lang.org/?version=stable&mode=debug&edition=2021&gist=4572a6f307d504c6d151306567868673)
 
-# Getting Started { background-image=noob.gif }
+# Getting Started { background-image=confused.gif }
 
 ## Tools
 
