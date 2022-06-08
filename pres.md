@@ -175,6 +175,39 @@ Microsoft, Google, IBM, Facebook, Huawei, Mozilla, Samsung, Kraken.
 
 Signal, System76, Npm, Nextcloud, Fly.io.
 
+# Waarom Rust voor mij { background-image=smart.gif }
+
+## Wat is voor mij belangrijk?
+
+* Software moet decennia doorontwikkeld kunnen worden.
+* Het Goede Is De Standaard (en het foute is heel moeilijk).
+* Eenvoudiger (niet makkelijker). Hosting, Testen, Delivery.
+* C is te moeilijk - Java te complex.
+* Ik ben Ruby developer (en web, dus Typescript/Javascript).
+
+## Goede Dingen
+
+* Compiler dwingt to nadenken.
+* Typechecker, Borrow checker maakt je beter.
+* Briljante Compiler Errors, Clippy, Type/Borrow voelt als Peer Programmer.
+* Supermakkelijk te deployen.
+* Als het compilet, dan werkt het!
+* Werkt vandaag. Werkt over tien jaar.
+
+## Slechte Dingen (voor anderen)
+
+* Trage Compiler
+* LLVM (en niet GCC)
+* Grote binaries
+
+## Slechte Dingen (voor mij)
+
+* Borrow- en Typechecker maakt me traag.
+* Onbekendheid met `Result<T,E>`, Types, Traits, etc: Decennia aan OOP uitbannen.
+* Onbekendheid met de *enorme* stdlib.
+* Heel Veel tooling (en geen apt-get).
+* Enorme build assets (Gigabytes aan caches).
+
 # Hello World { background-image=hello.gif }
 
 ## Hello World
