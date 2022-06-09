@@ -8,7 +8,6 @@ keywords:
   - rust
   - programming
   - introductie
-background-image: back.svg
 title-slide-attributes:
     data-background-image: animated-ferris.gif
     data-background-size: contain
