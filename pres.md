@@ -272,9 +272,55 @@ fn greet(name: String) {
 [Play](https://play.rust-lang.org/?version=stable&mode=debug&edition=2021&gist=719a66d4d0dabcaaecea6484bf89b223)
 
 ---
+
 * Clone [Play](https://play.rust-lang.org/?version=stable&mode=debug&edition=2021&gist=9c066c8f27eaf558d0eb4afd394324c7)
 * Reference [Play](https://play.rust-lang.org/?version=stable&mode=debug&edition=2021&gist=a13f5450049771869be55e2a9155af93)
 * Return [Play](https://play.rust-lang.org/?version=stable&mode=debug&edition=2021&gist=4572a6f307d504c6d151306567868673)
+
+## Hello Trait
+
+```rust
+pub trait Summary {
+    fn summarize(&self) -> String;
+}
+
+pub struct NewsArticle {
+    pub headline: String,
+    pub location: String,
+    pub author: String,
+    pub content: String,
+}
+
+impl Summary for NewsArticle {
+    fn summarize(&self) -> String {
+        format!("{}, by {} ({})", self.headline, self.author, self.location)
+    }
+}
+
+pub struct Tweet {
+    pub username: String,
+    pub content: String,
+    pub reply: bool,
+    pub retweet: bool,
+}
+
+impl Summary for Tweet {
+    fn summarize(&self) -> String {
+        format!("{}: {}", self.username, self.content)
+    }
+}
+
+pub fn notify<T: Summary>(item: &T) {
+    println!("Breaking news! {}", item.summarize());
+}
+```
+
+[Play](https://play.rust-lang.org/?version=stable&mode=debug&edition=2021&gist=c794b6a63659e9c8d6314bd1a8779ccd)
+
+::: notes
+traits are like interfaces. 
+impl allows adding functions and methods to structs.
+:::
 
 # Getting Started { background-image=confused.gif }
 
