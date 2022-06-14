@@ -2,7 +2,7 @@
 author:
   - Bèr `berkes` Kessels
 title: Introductie Rust
-subtitle: "Rust: een moderne programmeertaal door Mozilla"
+subtitle: "Introductie Rust voor Linux User Group Nijmegen 14 juni 2022"
 abstract: ""
 keywords:
   - rust
@@ -18,7 +18,7 @@ lang: nl
 
 ## Over deze presentatie
 
-* Is online: [berk.es/rust-pres](https://berk.es/rust-pres) (github.com/berkes/rust-pres)
+* Is online: [berk.es/lugn-rust](https://berk.es/lugn-rust) (github.com/berkes/rust-pres)
 * Bevat alle links
 * Enige kennis van automatisering of programmeren is mooi
 * Is in het Nederlands
