@@ -19,7 +19,7 @@ lang: nl
 ## Over deze presentatie
 
 * Is online: [berk.es/rust-pres](https://berk.es/rust-pres) (github.com/berkes/rust-pres)
-* Bevat alle links, klikbaar
+* Bevat alle links
 * Enige kennis van automatisering of programmeren is mooi
 * Is in het Nederlands
 
@@ -75,7 +75,7 @@ Memory unsafety. Null-pointer, Stack Overflow, Data Races, SegFaults etc.
 
 ::: notes
 
-Geldt ook voor Linux, Windows, Openssl (heartbleed), Apache, Libreoffice, Android, iOS, OSX, en Firefox.
+Geldt ook voor Linux, Windows, Openssl (heartbleed), Apache, LibreOffice, Android, iOS, OSX, en Firefox.
 
 :::
 
@@ -182,15 +182,15 @@ Signal, System76, Npm, Nextcloud, Fly.io.
 * Het Goede Is De Standaard (en het foute is heel moeilijk).
 * Eenvoudiger (niet makkelijker). Hosting, Testen, Delivery.
 * C is te moeilijk - Java te complex.
-* Ik ben Ruby developer (en web, dus Typescript/Javascript).
+* Ik ben Ruby developer (en web, dus Typescript/JavaScript).
 
 ## Goede Dingen
 
 * Compiler dwingt to nadenken.
-* Typechecker, Borrow checker maakt je beter.
+* Type checker, Borrow checker maakt je beter.
 * Briljante Compiler Errors, Clippy, Type/Borrow voelt als Peer Programmer.
 * Supermakkelijk te deployen.
-* Als het compilet, dan werkt het!
+* Als het compiled, dan werkt het!
 * Werkt vandaag. Werkt over tien jaar.
 
 ## Slechte Dingen (voor anderen)
@@ -201,8 +201,8 @@ Signal, System76, Npm, Nextcloud, Fly.io.
 
 ## Slechte Dingen (voor mij)
 
-* Borrow- en Typechecker maakt me traag.
-* Onbekendheid met `Result<T,E>`, Types, Traits, etc: Decennia aan OOP uitbannen.
+* Borrow- en Type checker maakt me traag.
+* Onbekendheid met `Result<T,E>`, Types, Traits, etc.: Decennia aan OOP uitbannen.
 * Onbekendheid met de *enorme* stdlib.
 * Heel Veel tooling (en geen apt-get).
 * Enorme build assets (Gigabytes aan caches).
@@ -318,7 +318,7 @@ pub fn notify<T: Summary>(item: &T) {
 
 ::: notes
 traits are like interfaces. 
-impl allows adding functions and methods to structs.
+`impl` allows adding functions and methods to structs.
 :::
 
 # Getting Started { background-image=confused.gif }
