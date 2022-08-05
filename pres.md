@@ -259,7 +259,7 @@ fn greet(name: String) {
 * Reference [Play](https://play.rust-lang.org/?version=stable&mode=debug&edition=2021&gist=a13f5450049771869be55e2a9155af93)
 * Return [Play](https://play.rust-lang.org/?version=stable&mode=debug&edition=2021&gist=4572a6f307d504c6d151306567868673)
 
-## Hello Trait
+## Hello Struct and Trait
 
 ```rust
 pub trait Summary {
@@ -303,6 +303,15 @@ pub fn notify<T: Summary>(item: &T) {
 traits are like interfaces. 
 `impl` allows adding functions and methods to structs.
 :::
+
+## <T: Summary>
+
+* Structs for Data
+* Traits for Behaviour
+* Composition (and no inherititance)
+* Types are enforced
+* Ownership is enforced
+* Good Defaults (private, immutable, etc)
 
 # Getting Started { background-image=confused.gif }
 
