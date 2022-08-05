@@ -317,9 +317,9 @@ traits are like interfaces.
 
 ## Tools
 
-* rustup (of `apt-get install rustc rust-all`)
+* rustup (or `apt-get install rustc rust-all`)
 * rustc 
-* cargo (of `apt-get install cargo`)
+* cargo (or `apt-get install cargo`)
 * clippy, fmt, wasm, test, clean, publish, watch, run
 
 ## Resources
