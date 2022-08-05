@@ -127,15 +127,18 @@ The problem to solve: [Memory Safety](https://hacks.mozilla.org/2019/01/fearless
 > Rust Is the Industry’s ‘Best Chance’ at Safe Systems Programming
 > -- [Microsoft](https://thenewstack.io/microsoft-rust-is-the-industrys-best-chance-at-safe-systems-programming/)
 
-## Rust: Borrow checker (ownership)
+## Rust: Compiler to the rescue
+
+* Borrow Checker
+* Type Checker
+
+## Borrow checker (ownership)
 
 > Ownership is Rust’s most unique feature, and it enables Rust to make memory
 > safety guarantees without needing a garbage collector.
 > -- [The Rust Handbook](https://doc.rust-lang.org/book/ch04-00-understanding-ownership.html)
 
-::: notes
-* Performance and Security and Correctness
-:::
+Compile-time
 
 ## Threading
 
