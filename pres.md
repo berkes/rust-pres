@@ -1,60 +1,57 @@
 ---
 author:
   - Bèr `berkes` Kessels
-title: Introductie Rust
-subtitle: "Introductie Rust voor Linux User Group Nijmegen 14 juni 2022"
+title: Introduction Rust
+subtitle: "Introduction Rust for Run Rust Anywhere 30-08-2022
 abstract: ""
 keywords:
   - rust
   - programming
-  - introductie
+  - introduction
 title-slide-attributes:
     data-background-image: animated-ferris.gif
     data-background-size: contain
-lang: nl
+lang: en
 ---
 
 # Rust {background-image="./animated-ferris.gif"}
 
-## Over deze presentatie
+## About
 
-* Is online: [berk.es/lugn-rust](https://berk.es/lugn-rust) (github.com/berkes/rust-pres)
-* Bevat alle links
-* Enige kennis van automatisering of programmeren is mooi
-* Is in het Nederlands
+* Is online: [berk.es/lugn-rust](https://berk.es/lugn-rust) (ithub.com/berkes/rust-pres)
+* Has all links
+* Is in English
 
-## Over mij {background-image="./ber.jpg"}
+## About me {background-image="./ber.jpg"}
 
 * Bèr `berkes` Kessels
-* @berkes
-* Werkt aan Plannel
-* Blog berk.es
-* Mail ber@berk.es
+* @berkes - Twitter, LinkedIn, Fediverse
+* Works on Plannel, and freelancer (for hire!)
+* Blogs on berk.es
 
-## Doel
+## Goal
 
-* Je volgend project(je) in Rust?
-* Hoe begin ik met Rust? 
-* Wanneer er interesse en tijd is, zullen we dieper in een voorbeeld duiken.
+* Your next project in Rust?
+* How do I get started with Rust?
 
-# Waarom Rust
+# Why Rust
 
-## Alles is C
+## Everything is C (somewhere)
 
 > Software is eating the world
 >
 > -- Marc Andreessen
 
-De wereld, anno 2022, draait op C.
+The world runs on C.
 
 ::: notes
 
-Bijna alle software is (uiteindelijk) in C geschreven. C++, C zelf, PHP,
-Python, Firefox, Linux, OSX (darwin), Windows.
+Almost all software is written in C. Even Ruby, Python or C++
+Firefox, Linux, OSX (Darwin), Windows.
 
 :::
 
-## De grote ontwerpfout
+## Biggest flaw
 
 > I call it my billion-dollar mistake…
 >
@@ -62,7 +59,7 @@ Python, Firefox, Linux, OSX (darwin), Windows.
 
 ::: notes
 
-C en C++ bevatten enkele, achteraf, kritische ontwerpfouten
+C en C++ have some design-flaws:
 Memory unsafety. Null-pointer, Stack Overflow, Data Races, SegFaults etc.
 
 :::
@@ -75,14 +72,14 @@ Memory unsafety. Null-pointer, Stack Overflow, Data Races, SegFaults etc.
 
 ::: notes
 
-Geldt ook voor Linux, Windows, Openssl (heartbleed), Apache, LibreOffice, Android, iOS, OSX, en Firefox.
+Linux, Windows, OpenSSL (heartbleed), Apache, LibreOffice, Android, iOS, OSX, en Firefox.
 
 :::
 
 ## Mozilla
 
-- 2010: Mozilla komt met [Project Servo](https://www.slideshare.net/BrendanEich/future-tense-7782010)
-- Rust 1.0, eerste stabiele versie: op 15 mei 2015 gelanceerd.
+- 2010: Mozilla comes with [Project Servo](https://www.slideshare.net/BrendanEich/future-tense-7782010)
+- Rust 1.0, first stable version: 15 May 2015.
 - 2021 - Rust Foundation door "Big five"
 
 > Rust is intended to be a language for highly concurrent and highly safe systems,
@@ -91,12 +88,11 @@ Geldt ook voor Linux, Windows, Openssl (heartbleed), Apache, LibreOffice, Androi
 
 ::: notes
 
-Mozilla ontsloeg 250 van haar 1000 werknemers in zomer 2020, n.a.v. COVID-19
-pandemie. Servo-team werd gestopt. Mozilla trok hiermee praktisch de stekker
-uit Rust.
+Mozilla fired 250 of their 1000 employees in summer 2020, following COVID-lockdowns.
+Servo-team was stopped. 
+Mozilla essentially killed Rust.
 
-Een externe foundation werd opgericht. En op 8 februari 2021, werd de Rust
-Foundation aangekondigd door de vijf founding bedrijven:
+8 February 2021, Rust Foundation was announced by five founding organisations:
 
 - AWS
 - Huawei
@@ -108,30 +104,22 @@ Foundation aangekondigd door de vijf founding bedrijven:
 
 --- 
 
-Op te lossen probleem: [Memory Safety](https://hacks.mozilla.org/2019/01/fearless-security-memory-safety/)
+The problem to solve: [Memory Safety](https://hacks.mozilla.org/2019/01/fearless-security-memory-safety/)
 
 ::: notes
 
-* Performance en Security
-* Pointers, addresses etc.
-* Lijst met 11 mensen -> Geef aan Peter om te sorteren en aan Oscar om "niet betaald" eruit te halen.
-* Wat als Oscar er twee uithaalt. En Peter ze nog aan het sorteren is?
+* Performance and Security
 
 :::
 
-## Iedereen: Garbage Collector
+## Everyone: Garbage collector
 
-* Laat de Runtime het oplossen:
-* `String greeting = "Hello";`
-* Heap? Stack? Gebruikt? Vrijgeven?
-* Traag! [Instagram: 10% performancewinst door uitzetten van de GC](https://instagram-engineering.com/dismissing-python-garbage-collection-at-instagram-4dca40b29172)
-* Locking - Threads
+* Let the runtime (or VM) solve it.
+* Slow! [Instagram: 10% performance gain by switching off the GC](https://instagram-engineering.com/dismissing-python-garbage-collection-at-instagram-4dca40b29172)
+* Hard for Multithreading (GIL)
 
 ::: notes
-* Stop! Alles.
-* Wat kunnen we opschonen? 
-* Verwijder dit.
-* Geef geheugen vrij.
+* Who wants to know how GC works?
 :::
 
 ## C en C++: DIY
@@ -146,12 +134,7 @@ Op te lossen probleem: [Memory Safety](https://hacks.mozilla.org/2019/01/fearles
 > -- [The Rust Handbook](https://doc.rust-lang.org/book/ch04-00-understanding-ownership.html)
 
 ::: notes
-
-* Performance en Security
-* Pointers, addresses etc.
-* Lijst met 11 mensen -> Geef aan Oscar om te filteren en **daarna door** aan Peter om te sorteren.
-* Wat als Oscar nummer 6 verwijdert? En Peter daarna bij 6 aanbeland tijdens het sorteren?
-
+* Performance and Security and Correctness
 :::
 
 ## Threading
@@ -159,53 +142,50 @@ Op te lossen probleem: [Memory Safety](https://hacks.mozilla.org/2019/01/fearles
 [Fearless Concurrency](https://doc.rust-lang.org/book/ch16-00-concurrency.html)
 
 > By leveraging ownership and type checking, many concurrency errors are compile-time errors in Rust rather than runtime errors.
-> -- [The Rust Programming Lanuage Handbook](https://doc.rust-lang.org/book/ch16-00-concurrency.html)
+> -- [The Rust Programming Language Handbook](https://doc.rust-lang.org/book/ch16-00-concurrency.html)
 
 ::: notes
-* Lijst met 11 mensen -> Geef aan Oscar om we filteren en **tegelijk** aan Peter om te sorteren.
-* Borrow-checker kan dit ook oplossen!
+* Borrow-checker happened to be an accidental solution
 :::
 
 ## Who?
 
-Android, Amazon, Cloudflare, Discord, Dropbox, ...
+Android, Amazon, CloudFlare, Discord, Dropbox, ...
 
 Microsoft, Google, IBM, Facebook, Huawei, Mozilla, Samsung, Kraken.
 
 Signal, System76, Npm, Nextcloud, Fly.io.
 
-# Waarom Rust voor mij { background-image=smart.gif }
+# Why Rust (for me) { background-image=smart.gif }
 
-## Wat is voor mij belangrijk?
+## What's important for me?
 
-* Software moet decennia doorontwikkeld kunnen worden.
-* Het Goede Is De Standaard (en het foute is heel moeilijk).
-* Eenvoudiger (niet makkelijker). Hosting, Testen, Delivery.
-* C is te moeilijk - Java te complex.
-* Ik ben Ruby developer (en web, dus Typescript/JavaScript).
+* Software should work for decennials.
+* The Proper Thing is the Default and The Easiest to do.
+* Simpler (not easier): Hosting, Testing, Delivery.
 
-## Goede Dingen
+## Good things
 
-* Compiler dwingt to nadenken.
-* Type checker, Borrow checker maakt je beter.
-* Briljante Compiler Errors, Clippy, Type/Borrow voelt als Peer Programmer.
-* Supermakkelijk te deployen.
-* Als het compiled, dan werkt het!
-* Werkt vandaag. Werkt over tien jaar.
+* Compiler forces you to think.
+* Type checker, Borrow checker makes you a better developer.
+* Brilliant Compiler Errors. Clippy, Type/Borrow feels like a Peer Programmer.
+* Supereasy to deploy.
+* If it compiles, it's done.
+* Works today. Works in 10 years.
 
-## Slechte Dingen (voor anderen)
+## Bad Things (for others) 
 
-* Trage Compiler
-* LLVM (en niet GCC)
-* Grote binaries
+* Slow compiler
+* LLVM (and not GCC)
+* Big Binaries
 
-## Slechte Dingen (voor mij)
+## Bad Things (for me)
 
-* Borrow- en Type checker maakt me traag.
-* Onbekendheid met `Result<T,E>`, Types, Traits, etc.: Decennia aan OOP uitbannen.
-* Onbekendheid met de *enorme* stdlib.
-* Heel Veel tooling (en geen apt-get).
-* Enorme build assets (Gigabytes aan caches).
+* Borrow- and Type checker slow me down.
+* Decades of OOP to unlearn.
+* The *huge* stdlib.
+* Lots of tooling (and few apt-get-able)
+* Giant build assets (Gigabytes of caches).
 
 # Hello World { background-image=hello.gif }
 
@@ -248,7 +228,7 @@ fn greet(name: String) {
     println!("Hello {}!", name);
 }
 ```
-* Wat gaat hier fout?
+* What's wrong here?
 
 [Play](https://play.rust-lang.org/?version=stable&mode=debug&edition=2021&gist=960875932d9d4c2179f65c8b065dcdd9)
 
@@ -265,8 +245,7 @@ fn greet(name: String) {
     println!("Hello {}!", name);
 }
 ```
-
-* Wat gaat hier fout?
+* Whats wrong here?
 
 [Play](https://play.rust-lang.org/?version=stable&mode=debug&edition=2021&gist=719a66d4d0dabcaaecea6484bf89b223)
 
@@ -340,11 +319,11 @@ traits are like interfaces.
 * [Rust Learning](https://github.com/ctjhoa/rust-learning)
 * [Take Your First Steps With Rust](https://docs.microsoft.com/en-us/learn/paths/rust-first-steps/)
 
-* Udemy, Coursera, Freecodecamp
+* Udemy, Coursera, Egghead, Freecodecamp
 
 # Deep Dive { background-image=dive.gif }
 
-## Duik in een voorbeeld
+## Dive into an Example
 
 * Commandline Tool: [Blek](https://github.com/berkes/blek)
 * Webservice: [Spicy Scarlet Slug](https://github.com/berkes/spicy-scarlet-slug)
