@@ -334,17 +334,6 @@ traits are like interfaces.
 
 * Udemy, Coursera, Egghead, Freecodecamp
 
-# Deep Dive { background-image=dive.gif }
-
-## Dive into an Example
-
-* Commandline Tool: [Blek](https://github.com/berkes/blek)
-* Webservice: [Spicy Scarlet Slug](https://github.com/berkes/spicy-scarlet-slug)
-* Bot: [Hunter2](https://github.com/Flockingbird/hunter2)
-* WASM: [WASM-Game-of-life](https://github.com/berkes/wasm-game-of-life)
-* Game Dev: ?
-* GUI Dev: ?
-
 # The End. Questions?
 
 berk.es/rre-rust
