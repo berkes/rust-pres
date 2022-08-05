@@ -163,7 +163,7 @@ Signal, System76, Npm, Nextcloud, Fly.io.
 
 ## What's important for me?
 
-* Software should work for decennials.
+* Software should work for decades.
 * The Proper Thing is the Default and The Easiest to do.
 * Simpler (not easier): Hosting, Testing, Delivery.
 
