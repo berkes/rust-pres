@@ -165,13 +165,14 @@ Signal, System76, Npm, Nextcloud, Fly.io.
 
 * Software should work for decades.
 * The Proper Thing is the Default and The Easiest to do.
-* Simpler (not easier): Hosting, Testing, Delivery.
+* Simpler (not easier): Maintainance, Hosting, Testing, Delivery.
 
 ## Good things
 
 * Compiler forces you to think.
 * Type checker, Borrow checker makes you a better developer.
-* Brilliant Compiler Errors. Clippy, Type/Borrow feels like a Peer Programmer.
+* Brilliant Compiler Errors. Feels like a Peer Programmer.
+* Built in testing, formatting, linting.
 * Supereasy to deploy.
 * If it compiles, it's done.
 * Works today. Works in 10 years.
