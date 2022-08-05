@@ -1,9 +1,9 @@
 ---
 author:
   - Bèr `berkes` Kessels
-title: Introduction Rust
-subtitle: "Introduction Rust for Run Rust Anywhere 30-08-2022
-abstract: ""
+title: An Introduction to Rust
+subtitle: "An Introduction to Rust for Run Rust Anywhere 30-08-2022"
+abstract: "A very basic introduction to the Rust Programming Language. It will convince you to pick Rust for your future projects. And show how and where to start."
 keywords:
   - rust
   - programming
