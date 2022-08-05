@@ -159,7 +159,7 @@ Microsoft, Google, IBM, Facebook, Huawei, Mozilla, Samsung, Kraken.
 
 Signal, System76, Npm, Nextcloud, Fly.io.
 
-# Why Rust (for me) { background-image=smart.gif }
+# Why Rust for me (work smarter not harder) { background-image=smart.gif }
 
 ## What's important for me?
 
