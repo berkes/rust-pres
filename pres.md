@@ -328,9 +328,9 @@ traits are like interfaces.
 * [Playground](https://play.rust-lang.org/)
 * [The Cargo Book](https://doc.rust-lang.org/cargo/)
 * [Commandline-, Webassembly-, Embedded book](https://www.rust-lang.org/learn/)
-* [Awesome Rust](https://github.com/rust-unofficial/awesome-rust#resources)
-* [Rust Learning](https://github.com/ctjhoa/rust-learning)
-* [Take Your First Steps With Rust](https://docs.microsoft.com/en-us/learn/paths/rust-first-steps/)
+* [Awesome Rust List](https://github.com/rust-unofficial/awesome-rust#resources)
+* [Rust Learning Wiki](https://github.com/ctjhoa/rust-learning)
+* [Take Your First Steps With Rust (Microsoft)](https://docs.microsoft.com/en-us/learn/paths/rust-first-steps/)
 
 * Udemy, Coursera, Egghead, Freecodecamp
 
