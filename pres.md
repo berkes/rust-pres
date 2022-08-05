@@ -18,7 +18,7 @@ lang: en
 
 ## About
 
-* Is online: [berk.es/lugn-rust](https://berk.es/lugn-rust) (ithub.com/berkes/rust-pres)
+* Is online: [berk.es/rre-rust](https://berk.es/rre-rust) (github.com/berkes/rust-pres)
 * Has all links
 * Is in English
 
@@ -331,3 +331,9 @@ traits are like interfaces.
 * WASM: [WASM-Game-of-life](https://github.com/berkes/wasm-game-of-life)
 * Game Dev: ?
 * GUI Dev: ?
+
+# The End. Questions?
+
+berk.es/rre-rust
+
+![./link_to_pres_as_qr.png]
