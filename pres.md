@@ -317,10 +317,11 @@ traits are like interfaces.
 
 ## Tools
 
-* rustup (or `apt-get install rustc rust-all`)
 * rustc 
-* cargo (or `apt-get install cargo`)
-* clippy, fmt, wasm, test, clean, publish, watch, run
+* cargo
+* rustup (or `apt-get install rustc rust-all cargo`)
+* fmt, test, clean, run, publish
+* clippy, watch, wasm
 
 ## Resources
 
