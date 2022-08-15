@@ -334,8 +334,8 @@ traits are like interfaces.
 
 * Udemy, Coursera, Egghead, Freecodecamp
 
-# The End. Questions?
+# The End
 
-berk.es/rre-rust
+## Questions?
 
-![./link_to_pres_as_qr.png]
+![berk.es/rre-rust](./link_to_pres_as_qr.png)
