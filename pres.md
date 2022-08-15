@@ -308,7 +308,7 @@ traits are like interfaces.
 
 * Structs for Data
 * Traits for Behaviour
-* Composition (and no inherititance)
+* Composition (and no inheritance)
 * Types are enforced
 * Ownership is enforced
 * Good Defaults (private, immutable, etc)
