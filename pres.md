@@ -24,10 +24,9 @@ lang: en
 
 ## About me {background-image="./ber.jpg"}
 
-* Bèr `berkes` Kessels
-* @berkes - Twitter, LinkedIn, Fediverse
+* Bèr Kessels
+* @berkes - Twitter, LinkedIn, Fediverse, https://berk.es
 * Works on Plannel, and freelancer (for hire!)
-* Blogs on berk.es
 
 ## Goal
 
@@ -51,19 +50,6 @@ Firefox, Linux, OSX (Darwin), Windows.
 
 :::
 
-## Biggest flaw
-
-> I call it my billion-dollar mistake…
->
-> -- Tony Hoare, inventor of ALGOL W.
-
-::: notes
-
-C en C++ have some design-flaws:
-Memory unsafety. Null-pointer, Stack Overflow, Data Races, SegFaults etc.
-
-:::
-
 ## Memory safety
 
 > Roughly 70% of all serious security bugs in the Chrome codebase are memory management and safety bugs
@@ -72,15 +58,11 @@ Memory unsafety. Null-pointer, Stack Overflow, Data Races, SegFaults etc.
 
 ::: notes
 
-Linux, Windows, OpenSSL (heartbleed), Apache, LibreOffice, Android, iOS, OSX, en Firefox.
+Memory unsafety. Null-pointer, Stack Overflow, Data Races, SegFaults etc.
 
 :::
 
 ## Mozilla
-
-- 2010: Mozilla comes with [Project Servo](https://www.slideshare.net/BrendanEich/future-tense-7782010)
-- Rust 1.0, first stable version: 15 May 2015.
-- 2021 - Rust Foundation door "Big five"
 
 > Rust is intended to be a language for highly concurrent and highly safe systems,
 > 
@@ -88,11 +70,9 @@ Linux, Windows, OpenSSL (heartbleed), Apache, LibreOffice, Android, iOS, OSX, en
 
 ::: notes
 
-Mozilla fired 250 of their 1000 employees in summer 2020, following COVID-lockdowns.
-Servo-team was stopped. 
-Mozilla essentially killed Rust.
-
-8 February 2021, Rust Foundation was announced by five founding organisations:
+- 2010: Mozilla comes with [Project Servo](https://www.slideshare.net/BrendanEich/future-tense-7782010)
+- Rust 1.0, first stable version: 15 May 2015.
+- 2021 - Rust Foundation door "Big five"
 
 - AWS
 - Huawei
@@ -106,21 +86,11 @@ Mozilla essentially killed Rust.
 
 The problem to solve: [Memory Safety](https://hacks.mozilla.org/2019/01/fearless-security-memory-safety/)
 
-::: notes
-
-* Performance and Security
-
-:::
-
 ## Everyone: Garbage collector
 
 * Let the runtime (or VM) solve it.
 * Slow! [Instagram: 10% performance gain by switching off the GC](https://instagram-engineering.com/dismissing-python-garbage-collection-at-instagram-4dca40b29172)
 * Hard for Multithreading (GIL)
-
-::: notes
-* Who wants to know how GC works?
-:::
 
 ## C en C++: DIY
 
@@ -129,16 +99,21 @@ The problem to solve: [Memory Safety](https://hacks.mozilla.org/2019/01/fearless
 
 ## Rust: Compiler to the rescue
 
-* Borrow Checker
-* Type Checker
-
 ## Borrow checker (ownership)
 
 > Ownership is Rust’s most unique feature, and it enables Rust to make memory
 > safety guarantees without needing a garbage collector.
 > -- [The Rust Handbook](https://doc.rust-lang.org/book/ch04-00-understanding-ownership.html)
 
-Compile-time
+Compile-time memory safety checks
+
+## Type checking
+
+> I call it my billion-dollar mistake…
+>
+> -- Tony Hoare, inventor of ALGOL W.
+
+Compile-time type checking. No `NULL`.
 
 ## Threading
 
@@ -155,16 +130,14 @@ Compile-time
 
 Android, Amazon, CloudFlare, Discord, Dropbox, ...
 
-Microsoft, Google, IBM, Facebook, Huawei, Mozilla, Samsung, Kraken.
-
-Signal, System76, Npm, Nextcloud, Fly.io.
+Microsoft, Google, IBM, Facebook, Huawei, Mozilla, Samsung, Kraken, Signal, System76, Npm, Nextcloud, Fly.io.
 
 # Why Rust for me (work smarter not harder) { background-image=smart.gif }
 
 ## What's important for me?
 
 * Software should work for decades.
-* The Proper Thing is the Default and The Easiest to do.
+* Good Defaults: Lazy = good; Bad = Extra effort.
 * Simpler (not easier): Maintainance, Hosting, Testing, Delivery.
 
 ## Good things
@@ -187,8 +160,8 @@ Signal, System76, Npm, Nextcloud, Fly.io.
 
 * Borrow- and Type checker slow me down.
 * Decades of OOP to unlearn.
-* The *huge* stdlib.
-* Lots of tooling (and few apt-get-able)
+* The *huge* basics and stdlib.
+* Requires lots of tooling
 * Giant build assets (Gigabytes of caches).
 
 # Hello World { background-image=hello.gif }
