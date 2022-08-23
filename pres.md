@@ -209,6 +209,36 @@ fn greet(name: String) {
 
 [Play](https://play.rust-lang.org/?version=stable&mode=debug&edition=2021&gist=960875932d9d4c2179f65c8b065dcdd9)
 
+## Types: No NULL
+
+> I call it my billion-dollar mistake…
+
+-- Tony Hoare, inventor of ALGOL W
+
+```Java
+Pizza pizza = null;
+```
+```JavaScript
+let olive;
+console.log(typeof olive);
+> undefined
+```
+
+## Null in Rust:
+
+```rust
+let pepper: Option<Topping> = Some(Topping {
+  desc: "Bell Pepper".to_string()
+});
+let cheese: Option<Topping> = None;
+println!("Pizza with {:?} veggies and {:?} cheese",
+  pepper,
+  cheese
+);
+```
+
+`Pizza with Some(Topping { desc: "Bell Pepper" }) veggies and None cheese`
+
 ## Hello Borrow Checker
 
 ```rust
