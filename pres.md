@@ -22,7 +22,7 @@ lang: en
 * Has all links
 * Is in English
 
-## About me {background-image="./ber.jpg"}
+## About me
 
 * Bèr Kessels
 * @berkes - Twitter, LinkedIn, Fediverse, https://berk.es
@@ -108,10 +108,6 @@ The problem to solve: [Memory Safety](https://hacks.mozilla.org/2019/01/fearless
 Compile-time memory safety checks
 
 ## Type checking
-
-> I call it my billion-dollar mistake…
->
-> -- Tony Hoare, inventor of ALGOL W.
 
 Compile-time type checking. No `NULL`.
 
@@ -323,7 +319,7 @@ traits are like interfaces.
 * rustc 
 * cargo
 * rustup (or `apt-get install rustc rust-all cargo`)
-* fmt, test, clean, run, publish
+* install, fmt, test, clean, run, publish
 * clippy, watch, wasm
 
 ## Resources
