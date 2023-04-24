@@ -1,9 +1,8 @@
 ---
 author:
   - Bèr `berkes` Kessels
-title: An Introduction to Rust
-subtitle: "An Introduction to Rust for Run Rust Anywhere 30-08-2022"
-abstract: "A very basic introduction to the Rust Programming Language. It will convince you to pick Rust for your future projects. And show how and where to start."
+title: "10 reasons to build your next projects in Rust"
+subtitle: "A quick introduction to Rust
 keywords:
   - rust
   - programming
@@ -19,323 +18,113 @@ lang: en
 ## About
 
 * Is online: [berk.es/rre-rust](https://berk.es/rre-rust) (github.com/berkes/rust-pres)
-* Has all links
+* Has very little code.
+* Is fast.
 * Is in English
 
-## About me
+## About me {background-image="./ber.jpg"}
 
+<div style="background-color: #00000066">
 * Bèr Kessels
-* @berkes - Twitter, LinkedIn, Fediverse, https://berk.es
-* Works on Plannel, and freelancer (for hire!)
+* @berkes@mastodon.nl - https://berk.es
+* Entrepeneur (looking for work in a startup as CTO, Tech Lead)
+</div>
 
-## Goal
+# 10 Reasons to choose Rust as the language for your next project
 
-* Your next project in Rust?
-* How do I get started with Rust?
+## 🙋 Who develops in C or C++?
+## 🙋 Who uses software (libraries) that are built in C or C++?
+## 1. Memory Safety:
 
-# Why Rust
+* Rust was built to fix this.
+* Ownership and borrowing system. 
+* RIP null pointer dereferences and buffer overflows.
 
-## Everything is C (somewhere)
 
-> Software is eating the world
->
-> -- Marc Andreessen
+## 🙋 Who developes in Java, Python, C# or Ruby?
+## 2. Speed:
 
-The world runs on C.
+* Rust was built to fix this.
+* Zero-cost abstractions.
+* Low-level control.
+* No Garbage Collector
 
-::: notes
+## 🙋 Who developes software that is used concurrently?
+## 🙋 HTTP backends?
+## 3. Fearless concurrency:
 
-Almost all software is written in C. Even Ruby, Python or C++
-Firefox, Linux, OSX (Darwin), Windows.
+* Rust wasn't built to fix this. It came for free.
+* Ownership system.
+* Lightweight threads. First class citizen. 
+* No Garbage Collector.
 
-:::
+## 🙋 Who uses typescript over Javascript?
+## 🙋 Who uses type hints in Python or PHP?
+## 4. Type System:
 
-## Memory safety
+* Rust's type system is powerful and expressive. 
+* More precise and correct programs.
+* The world is moving there.
 
-> Roughly 70% of all serious security bugs in the Chrome codebase are memory management and safety bugs
->
-> --  Google engineers
+## 🙋 Who deploys their software weekly?
+## 🙋 Who uses`^D^D`fights docker regularly?
+## 🙋 Who runs software on different platforms (dev on macOS, run on linux counts!)
+## 5. Cross-platform support
 
-::: notes
+* Compile to Windows, macOS, Linux, and many embedded systems out of the box.
+* LLVM: targets *many* platform
+* Statically linked by default: build, copy, done; CI config is tiny, cargo has it all.
 
-Memory unsafety. Null-pointer, Stack Overflow, Data Races, SegFaults etc.
+## 🙋 Who uses third party libraries?
+## 🙋 Who is afraid of third party libraries?
+## 6. Package manager:
 
-:::
+* Built-in package manager called Cargo.
+* Huge ecosystem of third party libraries.
+* \_\_\_ Left-pad is standardlib.
 
-## Mozilla
+## 🙋 Who has ever "rewritten from scratch" because every expert left?
+## 🙋 Who has to ask other programmers for help?
+## 7. Community
 
-> Rust is intended to be a language for highly concurrent and highly safe systems,
-> 
->  -- Graydon Hoare inventor of Rust.
+* Rust is popular: 2022: 7th year voted as *the most loved language*.
+* 2022: *Most wanted*, lands ahead of python.
+* All the "big guns" went all-in: Microsoft, Amazon, Facebook, Google, Huawei, Dropbox, etc.
+* And Mozilla, where it came from.
 
-::: notes
+## 🙋 Who uses an IDE (and, yes, Vim and Emacs can be IDEs)
+## 🙋 Who writes COBOL (and where did you park your Bently?)
+## 8. Tooling
+  
+* Guarantees to run today. And in 10 years.
+* Excellent tooling.
+* LSP: Rust-analyzer, code completion, syntax highlighting, more - the best across the board.
+* Cargo, Formatter, Linter, Clippy.
 
-- 2010: Mozilla comes with [Project Servo](https://www.slideshare.net/BrendanEich/future-tense-7782010)
-- Rust 1.0, first stable version: 15 May 2015.
-- 2021 - Rust Foundation door "Big five"
+------------------
 
-- AWS
-- Huawei
-- Google
-- Microsoft
-- Mozilla.
+![cargo fmt](./cargo-fmt.gif)
 
-:::
+------------------
 
---- 
+![cargo check](./cargo-check.gif)
 
-The problem to solve: [Memory Safety](https://hacks.mozilla.org/2019/01/fearless-security-memory-safety/)
+------------------
 
-## Everyone: Garbage collector
+![cargo others](./cargo-others.gif)
 
-* Let the runtime (or VM) solve it.
-* Slow! [Instagram: 10% performance gain by switching off the GC](https://instagram-engineering.com/dismissing-python-garbage-collection-at-instagram-4dca40b29172)
-* Hard for Multithreading (GIL)
+## 🙋 Who knows what the following means:
+* `TypeError: Super constructor null of Foo is not a constructor`
 
-## C en C++: DIY
+## 🙋 But who knows what the following means:
+![awseome errors](./errors.png)
 
-> Rust Is the Industry’s ‘Best Chance’ at Safe Systems Programming
-> -- [Microsoft](https://thenewstack.io/microsoft-rust-is-the-industrys-best-chance-at-safe-systems-programming/)
+## 9. Documentation
+  
+* Comprehensive, well-written.
+* Awesome and helpful compiler errors.
+* Great books. Great tutorials. Many free.
 
-## Rust: Compiler to the rescue
+## 🙋 10. What did I miss?
 
-## Borrow checker (ownership)
-
-> Ownership is Rust’s most unique feature, and it enables Rust to make memory
-> safety guarantees without needing a garbage collector.
-> -- [The Rust Handbook](https://doc.rust-lang.org/book/ch04-00-understanding-ownership.html)
-
-Compile-time memory safety checks
-
-## Type checking
-
-Compile-time type checking. No `NULL`.
-
-## Threading
-
-[Fearless Concurrency](https://doc.rust-lang.org/book/ch16-00-concurrency.html)
-
-> By leveraging ownership and type checking, many concurrency errors are compile-time errors in Rust rather than runtime errors.
-> -- [The Rust Programming Language Handbook](https://doc.rust-lang.org/book/ch16-00-concurrency.html)
-
-::: notes
-* Borrow-checker happened to be an accidental solution
-:::
-
-## Who?
-
-Android, Amazon, CloudFlare, Discord, Dropbox, ...
-
-Microsoft, Google, IBM, Facebook, Huawei, Mozilla, Samsung, Kraken, Signal, System76, Npm, Nextcloud, Fly.io.
-
-# Why Rust for me (work smarter not harder) { background-image=smart.gif }
-
-## What's important for me?
-
-* Software should work for decades.
-* Good Defaults: Lazy = good; Bad = Extra effort.
-* Simpler (not easier): Maintainance, Hosting, Testing, Delivery.
-
-## Good things
-
-* Compiler forces you to think.
-* Type checker, Borrow checker makes you a better developer.
-* Brilliant Compiler Errors. Feels like a Peer Programmer.
-* Built in testing, formatting, linting.
-* Supereasy to deploy.
-* If it compiles, it's done.
-* Works today. Works in 10 years.
-
-## Bad Things (for others) 
-
-* Slow compiler
-* LLVM (and not GCC)
-* Big Binaries
-
-## Bad Things (for me)
-
-* Borrow- and Type checker slow me down.
-* Decades of OOP to unlearn.
-* The *huge* basics and stdlib.
-* Requires lots of tooling
-* Giant build assets (Gigabytes of caches).
-
-# Hello World { background-image=hello.gif }
-
-## Hello World
-
-```rust
-fn main() {
-    println!("Hello World!");
-}
-```
-
-`rustc hello.rs`
-
-[Play](https://play.rust-lang.org/?version=stable&mode=debug&edition=2021&gist=1ec91939ba95a128f295bfa0fba22fde)
-
-## Hello Functions
-
-```rust
-fn main() {
-    println!("Hello {}!", "Moon");
-    greet("Mars");
-}
-
-fn greet(name: &str) {
-    println!("Hello {}!", name);
-}
-
-```
-[Play](https://play.rust-lang.org/?version=stable&mode=debug&edition=2021&gist=aee43ac97b5165cee53a72d8559c409e)
-
-## Hello Types
-```rust
-fn main() {
-    let name = format!("{} {}", "Bèr", "Kessels");
-    greet(name);
-    greet(42);
-}
-
-fn greet(name: String) {
-    println!("Hello {}!", name);
-}
-```
-* What's wrong here?
-
-[Play](https://play.rust-lang.org/?version=stable&mode=debug&edition=2021&gist=960875932d9d4c2179f65c8b065dcdd9)
-
-## Types: No NULL
-
-> I call it my billion-dollar mistake…
-
--- Tony Hoare, inventor of ALGOL W
-
-```Java
-Pizza pizza = null;
-```
-```JavaScript
-let olive;
-console.log(typeof olive);
-> undefined
-```
-
-## Null in Rust:
-
-```rust
-let pepper: Option<Topping> = Some(Topping {
-  desc: "Bell Pepper".to_string()
-});
-let cheese: Option<Topping> = None;
-println!("Pizza with {:?} veggies and {:?} cheese",
-  pepper,
-  cheese
-);
-```
-
-`Pizza with Some(Topping { desc: "Bell Pepper" }) veggies and None cheese`
-
-## Hello Borrow Checker
-
-```rust
-fn main() {
-    let name = format!("{} {}", "Bèr", "Kessels");
-    greet(name);
-    println!("Goodbye, {}", name);
-}
-
-fn greet(name: String) {
-    println!("Hello {}!", name);
-}
-```
-* Whats wrong here?
-
-[Play](https://play.rust-lang.org/?version=stable&mode=debug&edition=2021&gist=719a66d4d0dabcaaecea6484bf89b223)
-
----
-
-* Clone [Play](https://play.rust-lang.org/?version=stable&mode=debug&edition=2021&gist=9c066c8f27eaf558d0eb4afd394324c7)
-* Reference [Play](https://play.rust-lang.org/?version=stable&mode=debug&edition=2021&gist=a13f5450049771869be55e2a9155af93)
-* Return [Play](https://play.rust-lang.org/?version=stable&mode=debug&edition=2021&gist=4572a6f307d504c6d151306567868673)
-
-## Hello Struct and Trait
-
-```rust
-pub trait Summary {
-    fn summarize(&self) -> String;
-}
-
-pub struct NewsArticle {
-    pub headline: String,
-    pub location: String,
-    pub author: String,
-    pub content: String,
-}
-
-impl Summary for NewsArticle {
-    fn summarize(&self) -> String {
-        format!("{}, by {} ({})", self.headline, self.author, self.location)
-    }
-}
-
-pub struct Tweet {
-    pub username: String,
-    pub content: String,
-    pub reply: bool,
-    pub retweet: bool,
-}
-
-impl Summary for Tweet {
-    fn summarize(&self) -> String {
-        format!("{}: {}", self.username, self.content)
-    }
-}
-
-pub fn notify<T: Summary>(item: &T) {
-    println!("Breaking news! {}", item.summarize());
-}
-```
-
-[Play](https://play.rust-lang.org/?version=stable&mode=debug&edition=2021&gist=c794b6a63659e9c8d6314bd1a8779ccd)
-
-::: notes
-traits are like interfaces. 
-`impl` allows adding functions and methods to structs.
-:::
-
-## <T: Summary>
-
-* Structs for Data
-* Traits for Behaviour
-* Composition (and no inheritance)
-* Types are enforced
-* Ownership is enforced
-* Good Defaults (private, immutable, etc)
-
-# Getting Started { background-image=confused.gif }
-
-## Tools
-
-* rustc 
-* cargo
-* rustup (or `apt-get install rustc rust-all cargo`)
-* install, fmt, test, clean, run, publish
-* clippy, watch, wasm
-
-## Resources
-
-* [Rust Getting Started](https://www.rust-lang.org/learn/) - Book, Rustlings Course, Rust-by-example
-* [Playground](https://play.rust-lang.org/)
-* [The Cargo Book](https://doc.rust-lang.org/cargo/)
-* [Commandline-, Webassembly-, Embedded book](https://www.rust-lang.org/learn/)
-* [Awesome Rust List](https://github.com/rust-unofficial/awesome-rust#resources)
-* [Rust Learning Wiki](https://github.com/ctjhoa/rust-learning)
-* [Take Your First Steps With Rust (Microsoft)](https://docs.microsoft.com/en-us/learn/paths/rust-first-steps/)
-
-* Udemy, Coursera, Egghead, Freecodecamp
-
-# The End
-
-## Questions?
-
-![berk.es/rre-rust](./link_to_pres_as_qr.png)
+![](./hello.gif)
