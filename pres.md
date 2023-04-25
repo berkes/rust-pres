@@ -17,7 +17,6 @@ lang: en
 
 ## About
 
-* Is online: [berk.es/rre-rust](https://berk.es/rre-rust) (github.com/berkes/rust-pres)
 * Has very little code.
 * Is fast.
 * Is in English
