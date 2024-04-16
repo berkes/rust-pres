@@ -2,7 +2,7 @@
 author:
   - Bèr `berkes` Kessels
 title: "10 reasons to build your next projects in Rust"
-subtitle: "A quick introduction to Rust
+subtitle: "A quick introduction to Rust"
 keywords:
   - rust
   - programming
